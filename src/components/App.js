@@ -5,12 +5,12 @@ function App() {
     const [fImage, setfImage] = useState(null)
     
     useEffect( () => {
-        setTimeout( () =>{
+        setTimeout( () =>{ //just to see the loading... 
 
             fetch("https://dog.ceo/api/breeds/image/random")
                 .then(res => res.json())
                 .then(data => setfImage(data.message))
-        })
+        }, 1000)
     }, [])
 
     return (
